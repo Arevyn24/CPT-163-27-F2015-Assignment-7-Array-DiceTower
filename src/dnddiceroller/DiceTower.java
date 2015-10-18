@@ -39,9 +39,10 @@ public class DiceTower {
         for (Die die : diceList){
             
             for(int n = 0; n < PANEL_COUNT; n++) {
-                this.diceList.get(i).value = (new Random()).nextInt(6) + 1;
+                diceList.get(i).roll();
+                
             }
-            trayValue += diceList.get(i).value;
+            trayValue += diceList.get(i).getValue();
             i++;
         }   
     } 

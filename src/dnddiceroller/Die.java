@@ -11,8 +11,8 @@ import java.util.Random;
  */
 public class Die {
     
-    int sides;
-    int value;
+    private int sides;
+    private int value;
 
     public Die(int sides) {
         this.sides = sides;
@@ -24,7 +24,7 @@ public class Die {
     
     //add one to offset the starting point at zero
     public void roll() {
-        value = (new Random()).nextInt(this.sides) + 1; 
+        this.value = (new Random()).nextInt(this.sides) + 1; 
     }
     
 }
